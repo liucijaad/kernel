@@ -5,3 +5,6 @@ clean:
 	rm -f ./bin/boot.bin
 run:	
 	qemu-system-x86_64 ./bin/boot.bin
+
+check:
+	bless ./bin/boot.bin
