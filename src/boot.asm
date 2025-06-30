@@ -53,7 +53,7 @@ GDT_DESCRIPTOR:
 PMODEMAIN:
     MOV AX, DATA_OFFSET
     MOV DS, AX
-    MOV ED, AX
+    MOV ES, AX
     MOV SS, AX
     MOV GS, AX
     MOV EBP, 0x9C00 ;SET BASE POINTER FOR STACK.
@@ -63,7 +63,7 @@ PMODEMAIN:
     OR AL, 2
     OUT 0x92, AL
 
-    JMP
+    JMP $
 
 TIMES 510 - ($ - $$) DB 0
 
